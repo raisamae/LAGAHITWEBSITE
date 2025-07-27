@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovate Health - Nursing Informatics Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light blue-gray background */
+            color: #334155; /* Dark slate gray text */
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x600/3b82f6/ffffff?text=Nursing+Informatics+Innovation') no-repeat center center;
+            background-size: cover;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+            border-radius: 0.75rem; /* Rounded corners for the overlay */
+        }
+        /* Custom styles for better aesthetics */
+        .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .btn-primary {
+            background-color: #3b82f6; /* Blue-600 */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .btn-primary:hover {
+            background-color: #2563eb; /* Blue-700 */
+        }
+        .form-input {
+            border-radius: 0.5rem;
+            border: 1px solid #cbd5e1; /* Slate-300 */
+            padding: 0.75rem 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .form-textarea {
+            border-radius: 0.5rem;
+            border: 1px solid #cbd5e1; /* Slate-300 */
+            padding: 0.75rem 1rem;
+            width: 100%;
+            min-height: 120px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-12 rounded-b-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600 rounded-md p-2">Innovate Health</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md p-2">About Us</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md p-2">Services</a>
+                <a href="#team" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md p-2">Our Experts</a>
+                <a href="#resources" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md p-2">Resources</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-md p-2">Contact Us</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 text-center">
+            <a href="#about" class="block text-gray-700 hover:text-blue-600 font-medium transition duration-300 py-2 rounded-md">About Us</a>
+            <a href="#services" class="block text-gray-700 hover:text-blue-600 font-medium transition duration-300 py-2 rounded-md">Services</a>
+            <a href="#team" class="block text-gray-700 hover:text-blue-600 font-medium transition duration-300 py-2 rounded-md">Our Experts</a>
+            <a href="#resources" class="block text-gray-700 hover:text-blue-600 font-medium transition duration-300 py-2 rounded-md">Resources</a>
+            <a href="#contact" class="block text-gray-700 hover:text-blue-600 font-medium transition duration-300 py-2 rounded-md">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative py-20 px-4 sm:px-6 lg:px-8 rounded-xl mx-4 my-8">
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 rounded-md p-2">
+                Advancing Healthcare Through Nursing Informatics
+            </h1>
+            <p class="text-lg sm:text-xl mb-8 rounded-md p-2">
+                Leveraging data and technology to optimize patient care, improve workflows, and empower nursing professionals.
+            </p>
+            <a href="#contact" class="btn-primary inline-block shadow-lg hover:shadow-xl rounded-full">Explore Our Solutions</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-white rounded-xl mx-4 my-8 shadow-lg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-blue-700 mb-8">About Innovate Health & Nursing Informatics</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://placehold.co/600x400/a78bfa/ffffff?text=Data+in+Healthcare" alt="Data in Healthcare" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 text-left">
+                    <p class="text-lg leading-relaxed mb-6">
+                        Innovate Health specializes in Nursing Informatics, the science that integrates nursing, computer, and information sciences to manage and communicate data, information, and knowledge in nursing practice. Our goal is to enhance patient outcomes, streamline clinical workflows, and provide nurses with the tools they need to deliver exceptional care.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        We work with healthcare organizations to implement cutting-edge technological solutions, optimize electronic health records (EHRs), analyze healthcare data for insights, and provide comprehensive training programs. Our expertise ensures that technology serves as a powerful ally in the evolving landscape of modern healthcare.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 rounded-xl mx-4 my-8 shadow-lg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-blue-700 mb-12">Our Nursing Informatics Solutions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1: EHR Implementation & Optimization -->
+                <div class="card bg-white p-8 rounded-lg shadow-md hover:shadow-xl">
+                    <div class="text-blue-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">EHR Implementation & Optimization</h3>
+                    <p class="text-gray-600">
+                        Seamless integration and optimization of Electronic Health Record systems to enhance data accuracy and clinical efficiency.
+                    </p>
+                </div>
+                <!-- Service Card 2: Clinical Workflow Redesign -->
+                <div class="card bg-white p-8 rounded-lg shadow-md hover:shadow-xl">
+                    <div class="text-blue-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Clinical Workflow Redesign</h3>
+                    <p class="text-gray-600">
+                        Analyzing and redesigning clinical processes using informatics principles to improve efficiency and patient safety.
+                    </p>
+                </div>
+                <!-- Service Card 3: Data Analytics & Reporting -->
+                <div class="card bg-white p-8 rounded-lg shadow-md hover:shadow-xl">
+                    <div class="text-blue-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Analytics & Reporting</h3>
+                    <p class="text-gray-600">
+                        Extracting meaningful insights from healthcare data to support evidence-based practice and strategic decision-making.
+                    </p>
+                </div>
+                <!-- Service Card 4: Telehealth & Remote Monitoring -->
+                <div class="card bg-white p-8 rounded-lg shadow-md hover:shadow-xl">
+                    <div class="text-blue-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Telehealth & Remote Monitoring</h3>
+                    <p class="text-gray-600">
+                        Implementing and managing virtual care platforms and remote patient monitoring solutions for extended care.
+                    </p>
+                </div>
+                <!-- Service Card 5: Clinical Decision Support -->
+                <div class="card bg-white p-8 rounded-lg shadow-md hover:shadow-xl">
+                    <div class="text-blue-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Clinical Decision Support</h3>
+                    <p class="text-gray-600">
+                        Developing and integrating systems that provide clinicians with patient-specific assessments and recommendations at the point of care.
+                    </p>
+                </div>
+                <!-- Service Card 6: Informatics Training & Education -->
+                <div class="card bg-white p-8 rounded-lg shadow-md hover:shadow-xl">
+                    <div class="text-blue-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Informatics Training & Education</h3>
+                    <p class="text-gray-600">
+                        Providing comprehensive training programs for healthcare professionals on new technologies and informatics best practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="team" class="py-16 px-4 sm:px-6 lg:px-8 bg-white rounded-xl mx-4 my-8 shadow-lg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-blue-700 mb-12">Meet Our Informatics Experts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl">
+                    <img src="https://placehold.co/150x150/60a5fa/ffffff?text=Informatics+A" alt="Dr. Jonalen Lagahit" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Dr. Jonalen Lagahit, DNP, RN-BC</h3>
+                    <p class="text-blue-600 mb-2">Chief Nursing Informatics Officer</p>
+                    <p class="text-gray-600 text-sm">
+                        Dr.Lagahit leads our strategic initiatives in leveraging informatics for improved patient care and operational efficiency.
+                    </p>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl">
+                    <img src="https://placehold.co/150x150/60a5fa/ffffff?text=Informatics+B" alt="Michael Chen" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Hayley Williams, MSN, RN</h3>
+                    <p class="text-blue-600 mb-2">Informatics Project Manager</p>
+                    <p class="text-gray-600 text-sm">
+                        Hayley specializes in EHR implementation and optimizing clinical workflows through technology.
+                    </p>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl">
+                    <img src="https://placehold.co/150x150/60a5fa/ffffff?text=Informatics+C" alt="Jessica Kim" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Taylor Swift, BSN, RN</h3>
+                    <p class="text-blue-600 mb-2">Clinical Data Analyst</p>
+                    <p class="text-gray-600 text-sm">
+                         Taylor uses her nursing expertise and analytical skills to derive actionable insights from healthcare data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nursing Informatics Resources Section -->
+    <section id="resources" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 rounded-xl mx-4 my-8 shadow-lg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-blue-700 mb-12">Nursing Informatics Resources</h2>
+            <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                Stay informed with the latest trends and best practices in nursing informatics. Our resources are designed for healthcare professionals, students, and anyone interested in the intersection of nursing and technology.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Resource Card 1 -->
+                <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-xl text-left">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">The Role of AI in Nursing Practice</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Explore how artificial intelligence is transforming nursing workflows and patient care delivery.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:underline font-medium">Read Article &rarr;</a>
+                </div>
+                <!-- Resource Card 2 -->
+                <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-xl text-left">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Cybersecurity Best Practices for Healthcare</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        A critical guide to protecting patient data and maintaining security in a digital healthcare environment.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:underline font-medium">Read Article &rarr;</a>
+                </div>
+                <!-- Resource Card 3 -->
+                <div class="card bg-white p-6 rounded-lg shadow-md hover:shadow-xl text-left">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Leveraging Telehealth for Chronic Disease Management</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Understand the benefits and implementation strategies for using telehealth to manage long-term conditions.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:underline font-medium">Read Article &rarr;</a>
+                </div>
+            </div>
+            <div class="mt-10">
+                <a href="#" class="btn-primary inline-block shadow-lg hover:shadow-xl rounded-full">View All Informatics Resources</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 rounded-xl mx-4 my-8 shadow-lg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-blue-700 mb-12">Contact Our Informatics Team</h2>
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md hover:shadow-xl">
+                <p class="text-lg text-gray-700 mb-8">
+                    Interested in our nursing informatics solutions or have a specific inquiry? Reach out to us.
+                </p>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-left text-gray-700 font-medium mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Tungtung saur" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-left text-gray-700 font-medium mb-2">Your Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Tungtung.saur@gmail.com required>
+                    </div>
+                    <div>
+                        <label for="organization" class="block text-left text-gray-700 font-medium mb-2">Organization (Optional)</label>
+                        <input type="text" id="organization" name="organization" class="form-input" placeholder="Healthcare System Inc.">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-left text-gray-700 font-medium mb-2">Your Inquiry</label>
+                        <textarea id="message" name="message" class="form-textarea" placeholder="I'd like to discuss EHR optimization for my hospital..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full md:w-auto shadow-lg hover:shadow-xl rounded-full">Send Inquiry</button>
+                </form>
+                <div class="mt-8 text-gray-700">
+                    <p class="mb-2"><strong>Email:</strong> Lagahitjonalen@gmail.com</p>
+                    <p class="mb-2"><strong>Phone:</strong> 09518630123</p>
+                    <p><strong>Address:</strong> 122 kasunduan ext, Barangay Commonwealth, Quezon City</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-8 px-4 sm:px-6 lg:px-8 rounded-t-lg mx-4 my-8">
+        <div class="container mx-auto text-center">
+            <p class="mb-4">&copy; 2025 Innovate Health - Nursing Informatics Solutions. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Toggle mobile menu visibility
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Optional: Close mobile menu when clicking outside (or on resize)
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) { // md breakpoint in Tailwind
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
